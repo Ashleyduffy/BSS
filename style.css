@@ -52,20 +52,20 @@ figure {
     }
 header h1 {
      font-size:6vw;
- color:#f19c79;
+ color:#D4AF37;
      font-family:Georgia;
      
      
      text-align:center;
     }
 header h2{
- color:#a44a3f;
+ color:#D4AF37	;
  
 }
 header h4 {
     font-size:3vw;
     font-family:Georgia;
-    color:#a44a3f;
+    color:#D4AF37	;
     text-shadow:;
     margin:1em 0 0 0;
     }
@@ -81,11 +81,11 @@ header li {
 }
 header p {
   text-align: right;
-  color: #a44a3f;
+  color: #D4AF37	;
   font-size: 15px;
 }
 nav {
-    background-color:#d4e09b;
+    background-color:#7E2CAD;
     font-size:125%;
     grid-area:nav;
     text-align:center;
