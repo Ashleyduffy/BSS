@@ -1,0 +1,539 @@
+/*index - this does the sticky navigation (top) and the header having an image beside the text*/
+* {
+ box-sizing:border-box;
+}
+body {
+ background:#f6f4d2;
+  background-image: ;
+  background-repeat: repeat;
+  font-family: Georgia;
+  margin:0;
+  
+    }
+img {
+    max-width:200px;
+}
+.box {
+  border: 1px;
+  padding: 10px;
+    }
+    
+header {
+    grid-area:header;
+    padding: 1%;
+    
+    }
+
+.headerpic {
+    grid-area:headerpic;
+    
+
+    }
+.headertext {
+   grid-area:headertext;
+    text-align:center;
+    
+
+    }
+
+.logo {
+  max-width:200px;
+  text-align:center;
+  
+}
+figure {
+  margin:0;
+}
+
+.headerwrapper {
+    display:grid;
+   
+    
+    }
+header h1 {
+     font-size:6vw;
+ color:#f19c79;
+     font-family:Georgia;
+     
+     
+     text-align:center;
+    }
+header h2{
+ color:#a44a3f;
+ 
+}
+header h4 {
+    font-size:3vw;
+    font-family:Georgia;
+    color:#a44a3f;
+    text-shadow:;
+    margin:1em 0 0 0;
+    }
+    
+header a {
+    text-decoration:none;
+    color:white;
+    }
+header li {
+  color: #a44a3f;
+  font-size: 20px;
+  
+}
+header p {
+  text-align: right;
+  color: #a44a3f;
+  font-size: 15px;
+}
+nav {
+    background-color:#d4e09b;
+    font-size:125%;
+    grid-area:nav;
+    text-align:center;
+    padding:.5em;
+    margin:0;
+ color:#491723;
+    /*Lines 92 to 94 make the menu stick to the top*/
+    position: sticky;
+    top:100;
+    z-index:999;
+}
+
+main {
+   
+    color:#D4AF37	;
+    grid-area:main;
+    
+     
+    }
+    .mainborder{
+      padding: 10px;
+      border:5px double #cbdfbd;
+    }
+    
+   
+main a {
+    
+    font-weight:bold;
+}
+.button {
+ color: #491723;
+}
+main h1 {
+  text-align: center;
+  margin:30px;
+}
+main h2 {
+ font-weight:bold;
+ text-align:center;
+}
+main h3 {
+  font-weight: bold;
+
+}
+
+.store{
+  border-radius:10px;
+  margin:2em;
+}
+.storewrap p{
+font-size:25px;
+}
+.location{
+  text-align:center;
+}
+.map{
+  margin:100px;
+}
+
+h2 {
+  font-family: Georgia;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.gallery {
+  
+}
+
+.gallery-cell {
+  width: 86%;
+  height:25rem;
+  margin-right: 10px;
+ background: rgba(255,255,255,.5);
+  counter-increment: gallery-cell;
+  display: grid;
+  grid-template-columns:60% 40%;
+  grid-template-areas:
+  "left right";
+ 
+}
+.left {
+  grid-area:left;
+
+}
+.right{
+  grid-area:right;
+
+   margin:auto;
+}
+.right img {
+  padding-top:2.5em;
+  
+  max-width:90%;
+}
+.gallery-cell p{
+  font-size:.6em;
+}
+.gallery-cell li{
+  font-size:.6em;
+}
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  margin:5px;
+  line-height: 200px;
+  font-size: 80px;
+  color: navy;
+  
+  
+}
+.gallery-cell h2{
+  color:navy;
+}
+.gallery-cell ul{
+  color:navy;
+  
+}
+.gallery-cell p{
+  color:navy;
+  font-weight:bold
+}
+
+aside {
+    color: #a44a3f;
+    grid-area:aside;
+    }
+    .asideborder{
+       padding: 10px;
+      border:5px double #cbdfbd;
+    }
+      
+aside a {
+ color: #491723;
+ font-weight:bold;
+}
+/*Slideshow*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+65% { left: -200%; }
+70% { left: -300%; }
+85% { left: -300%; }
+100% { left: -400%; }
+}
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%;}
+div#slider figure {
+  position: relative;
+  z-index:1;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+
+/* Location */
+
+.storewrap {
+  position: relative;
+
+}
+
+footer {
+    color:#a44a3f;
+    text-align:center;
+    
+    grid-area:footer;
+    }
+    .footerborder{
+      border:5px double #cbdfbd;
+    }
+    
+
+
+   
+/*--------Mobile first - no media query needed until the screen is larger than 480px---------*/
+.wrapper1 { /*index.html*/
+    display: grid;
+    margin:0;
+    grid-gap: .5em;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  }
+ .wrapper2 { /*layout2.html*/
+    display: grid;
+    margin:0;
+    grid-gap: .5em;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "aside"
+    "footer";
+  }
+   .wrapper3 { /*location.html*/
+    display: grid;
+    margin:0;
+    grid-gap: .5em;
+    grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+  }
+  .gallerywrapper {
+  display: grid;
+  justify-items:center;
+  grid-gap:.5em;
+  align-items:end;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+  
+/*This stuff is for the hamburger menu*/
+.toggleNav {
+    display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+    padding:10px;
+    }
+
+#flex-nav ul {
+    display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+ 
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display:grid;
+    }
+    
+#flex-nav li {
+    padding-left:10px;
+    padding-top:10px;
+    }
+#flex-nav a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    }
+#flex-nav a:hover {
+    color:white;
+    }
+
+nav ul {
+ list-style-type: none;
+}
+/*This stuff is to make my navigation go horizontal on full screen*/
+.first {
+    grid-area:first;
+    margin-left:0;
+}
+.second {
+    grid-area:second;
+}
+.third {
+    grid-area:third;
+}
+.fourth {
+    grid-area:fourth;
+}
+.fifth {
+    grid-area:fifth;
+}
+#navwrapper {
+    display:grid;
+    grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth";
+    }
+    
+#content-desktop {
+  display:none;
+}
+#content-mobile {
+  display:grid;
+}
+.nestedgrid{
+display:grid;
+grid-template-areas:
+"div1 div2 div3 div4";
+}
+/*---------------------Tablet media query----------------------------*/
+@media only screen and (min-width: 480px)  {
+.wrapper1 { /*index.html*/
+    grid-template-columns: 45% auto;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+    }
+    .wrapper2 { /*layout2.html*/
+    display: grid;
+    margin:0;
+    grid-gap: .5em;
+    grid-template-areas:
+    "header header"
+    "nav main"
+    "nav main"
+    "aside aside"
+    "footer footer";
+  }
+  .wrapper3 { /*location.html*/
+    display: grid;
+    margin:0;
+    grid-gap: .5em;
+    grid-template-areas:
+    "nav nav"
+    "header header"
+    "main main"
+    "footer footer";
+  }
+ .gallery-cell {
+  width: 86%;
+  height:35rem;
+  margin-right: 10px;
+ background: rgba(255,255,255,.5);
+  counter-increment: gallery-cell;
+}
+.gallery-cell p{
+  font-size:1em;
+  margin:10px;
+}
+.gallery-cell li{
+  font-size:1em;
+}
+#content-desktop {
+  display:none;
+}
+#content-mobile {
+  display:grid;
+}
+.facebook {
+ max-height:4em;
+ min-width:2em;
+ margin-right:.25em;
+ margin-bottom:0;
+ margin-top:2em;
+}
+.gallery-cell {
+  width: 86%;
+  min-height: 400px;
+  margin-right: 10px;
+ background: rgba(255,255,255,.5);
+  counter-increment: gallery-cell;
+}
+}
+/*---------------------Desktop media query----------------------------*/
+@media only screen and (min-width: 1100px)   {
+     
+.wrapper1 { /*index.html*/
+    grid-template-columns: 60% auto;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
+    }
+    .wrapper2 { /*services.html*/
+    display: grid;
+    margin:0;
+    grid-gap: .5em;
+    grid-template-areas:
+    "header header"
+    "nav main"
+    "nav main"
+    "aside aside"
+    "footer footer";
+  }
+.wrapper3 { /*location.html*/
+    display: grid;
+    margin:0;
+    grid-gap: .5em;
+    grid-template-areas:
+    "nav nav"
+    "header header"
+    "main main"
+    "footer footer";
+  }
+.gallery-cell {
+  width: 86%;
+  height:30rem;
+  margin-right: 10px;
+ background: rgba(255,255,255,.5);
+  counter-increment: gallery-cell;
+}
+.gallery-cell p{
+  font-size:1em;
+}
+.gallery-cell li{
+  font-size:1em;
+}
+
+#navwrapper {
+    display:grid;
+     grid-template-areas:
+    "first second third fourth fifth";
+    
+    }
+    
+.toggleNav {
+    display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+  }
+  
+  
+#flex-nav ul {
+    display:grid;
+    text-align:center;
+}
+#flex-nav li {
+    padding-top:10px;
+}
+#content-desktop {
+  display:grid;
+}
+#content-mobile {
+  display:none;
+}
+.facebook{
+  margin-top:1em;
+  margin-right:0;
+}
+.gallery-cell {
+  width: 86%;
+  min-height: 400px;
+  margin-right: 10px;
+ background: rgba(255,255,255,.5);
+  counter-increment: gallery-cell;
+}
+}
